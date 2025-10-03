@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinder AI - Your Career Mentor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-black bg-opacity-50 fixed w-full z-10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-white">PATHFINDER AI</div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="text-white hover:text-orange-500">HOME</a>
+                <a href="#features" class="text-white hover:text-orange-500">FEATURES</a>
+                <a href="#about" class="text-white hover:text-orange-500">ABOUT</a>
+                <a href="#blogs" class="text-white hover:text-orange-500">BLOGS</a>
+                <a href="#start" class="text-white hover:text-orange-500">GET STARTED</a>
+            </nav>
+            <button class="md:hidden text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section h-screen flex items-center justify-center text-center">
+        <div class="bg-black bg-opacity-60 p-12 rounded-lg scroll-animate">
+            <h1 class="text-6xl font-extrabold text-white leading-tight">END CAREER CONFUSION</h1>
+            <p class="text-xl text-gray-300 mt-4">Your personalized career roadmap, powered by AI.</p>
+            <div class="mt-8 space-x-4">
+                <a href="#start" class="btn-primary px-8 py-3 font-semibold rounded">GET STARTED</a>
+                <a href="#features" class="btn-secondary px-8 py-3 font-semibold rounded border-2">LEARN MORE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section id="features" class="py-20 bg-gray-900 scroll-animate">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">How Pathfinder AI Works</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div id="feature-buttons" class="w-full md:w-1/3 space-y-4">
+                    <button data-feature="analysis" class="w-full text-left p-4 rounded-lg flex items-center space-x-4 active-feature">
+                        <i class="fas fa-user-check feature-icon"></i>
+                        <span>Profile Analysis</span>
+                    </button>
+                    <button data-feature="recommendations" class="w-full text-left p-4 hover:bg-gray-800 rounded-lg flex items-center space-x-4">
+                        <i class="fas fa-briefcase feature-icon"></i>
+                        <span>Job Recommendations</span>
+                    </button>
+                    <button data-feature="roadmap" class="w-full text-left p-4 hover:bg-gray-800 rounded-lg flex items-center space-x-4">
+                        <i class="fas fa-road feature-icon"></i>
+                        <span>Personalized Roadmap</span>
+                    </button>
+                    <button data-feature="resources" class="w-full text-left p-4 hover:bg-gray-800 rounded-lg flex items-center space-x-4">
+                        <i class="fas fa-book-open feature-icon"></i>
+                        <span>Free Resources</span>
+                    </button>
+                    <button data-feature="industrialExpertise" class="w-full text-left p-4 hover:bg-gray-800 rounded-lg flex items-center space-x-4">
+                        <i class="fas fa-industry feature-icon"></i>
+                        <span>Industrial Expertise</span>
+                    </button>
+                </div>
+                <div class="w-full md:w-2/3 md:pl-12 mt-8 md:mt-0 feature-content">
+                    <h3 id="feature-title" class="text-3xl font-bold text-orange-500">Holistic Profile Analysis</h3>
+                    <p id="feature-description" class="mt-4 text-gray-300">Our AI deeply analyzes your resume, skills, interests, and project portfolios to understand your unique strengths and aspirations. We go beyond keywords to build a comprehensive view of your capabilities.</p>
+                    <ul id="feature-list" class="mt-6 space-y-2 text-gray-300 list-disc list-inside">
+                        <li>Resume & CV Parsing</li>
+                        <li>Skill & Interest Inventory</li>
+                        <li>GitHub & Portfolio Integration</li>
+                        <li>Identifies both technical and soft skills</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800 scroll-animate">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">The Pathfinder Mission</h2>
+            <div class="flex flex-col md:flex-row items-center mb-12">
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-3xl font-bold text-orange-500">Solving the Student's Dilemma</h3>
+                    <p class="mt-4 text-gray-300">The journey from classroom to career is often filled with confusion and uncertainty. We're here to change that. Pathfinder AI was created to bridge the gap between academic knowledge and industry demands, providing a clear, actionable path for every student.</p>
+                </div>
+                <div class="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Students collaborating" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row-reverse items-center">
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-3xl font-bold text-orange-500">Data-Driven Guidance</h3>
+                    <p class="mt-4 text-gray-300">Our recommendations aren't guesswork. We leverage cutting-edge machine learning models and real-time job market data to ensure your career path is relevant, in-demand, and perfectly aligned with your personal and professional goals. With Pathfinder AI, you're embracing a future built on informed decisions.</p>
+                </div>
+                <div class="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Data charts and graphs" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blogs" class="py-20 bg-gray-900 scroll-animate">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Insights from Industry Experts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Card 1 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                    <img src="1729081.jpg" alt="AI Blog Post" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-orange-500 uppercase">AI & Machine Learning</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Navigating the Future: Key Trends in AI for 2026</h3>
+                        <p class="text-gray-400 text-sm mb-4">An inside look at the technologies and skills that will shape the next wave of artificial intelligence, from generative models to ethical AI frameworks.</p>
+                        <div class="flex items-center mt-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author" class="w-10 h-10 rounded-full mr-3">
+                            <div>
+                                <p class="font-semibold text-white">Alex Johnson</p>
+                                <p class="text-xs text-gray-500">Lead AI Scientist @ Innovate Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Card 2 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                     <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1964&auto=format&fit=crop" alt="Career Blog Post" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-orange-500 uppercase">Career Advice</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">The Non-Technical Skills That Land Tech Jobs</h3>
+                        <p class="text-gray-400 text-sm mb-4">Beyond coding: We explore the crucial soft skills like communication, problem-solving, and business acumen that hiring managers are desperate for.</p>
+                         <div class="flex items-center mt-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author" class="w-10 h-10 rounded-full mr-3">
+                            <div>
+                                <p class="font-semibold text-white">Samantha Lee</p>
+                                <p class="text-xs text-gray-500">Senior Recruiter @ TechCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Card 3 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                    <img src="OIP.webp" alt="Data Science Blog Post" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-orange-500 uppercase">Data Science</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">From Raw Data to Real Impact: A Project Guide</h3>
+                        <p class="text-gray-400 text-sm mb-4">A step-by-step guide on how to approach a data science project, from defining the problem to presenting your findings to stakeholders.</p>
+                         <div class="flex items-center mt-4">
+                            <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Author" class="w-10 h-10 rounded-full mr-3">
+                            <div>
+                                <p class="font-semibold text-white">David Chen</p>
+                                <p class="text-xs text-gray-500">Principal Data Scientist @ DataWorks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generator Section -->
+    <section id="start" class="py-20 bg-gray-800 scroll-animate">
+        <div class="container mx-auto px-6 flex justify-center">
+            <div class="bg-white text-gray-700 p-8 rounded-xl shadow-2xl max-w-2xl w-full">
+                 <h2 class="text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
+                    <i class="fas fa-crosshairs text-pink-500"></i>
+                    AI Career Mentor
+                </h2>
+                <form id="mentor-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="flex items-center gap-2 font-semibold mb-2 text-gray-600"><i class="fas fa-user text-purple-500"></i>Name:</label>
+                        <input type="text" id="name" placeholder="e.g., Jane Doe" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" required>
+                    </div>
+                    <div>
+                        <label for="email" class="flex items-center gap-2 font-semibold mb-2 text-gray-600"><i class="fas fa-envelope text-blue-500"></i>Email:</label>
+                        <input type="email" id="email" placeholder="jane.doe@example.com" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" required>
+                    </div>
+                    <div>
+                        <label for="skills" class="flex items-center gap-2 font-semibold mb-2 text-gray-600"><i class="fas fa-lightbulb text-yellow-500"></i>Your Skills (comma separated):</label>
+                        <input type="text" id="skills" placeholder="e.g., Python, HTML, CSS" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition" required>
+                    </div>
+                     <div>
+                        <label for="interests" class="flex items-center gap-2 font-semibold mb-2 text-gray-600"><i class="fas fa-heart text-red-500"></i>Interests:</label>
+                        <select id="interests" class="w-full p-3 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 transition">
+                            <option value="AI">Artificial Intelligence</option>
+                            <option value="Web">Web Development</option>
+                            <option value="Data">Data Science</option>
+                            <option value="Mobile">Mobile App Development</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="resume" class="flex items-center gap-2 font-semibold mb-2 text-gray-600"><i class="fas fa-file-alt text-green-500"></i>Upload Resume (Optional):</label>
+                        <input type="file" id="resume" class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
+                        <i class="fas fa-rocket"></i>Get Career Path
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Result Section -->
+    <section id="roadmap-result" class="py-20 bg-gray-900 hidden">
+        <div class="container mx-auto px-6">
+            <div id="loader" class="flex justify-center items-center h-40"><div class="loader"></div></div>
+            <div id="roadmap-content" class="hidden">
+                 <h2 class="text-4xl font-bold text-center mb-4">Your Personalized Roadmap</h2>
+                 <p class="text-center text-lg text-gray-400 mb-6">A guide to becoming a <span id="role-title" class="font-bold text-orange-500"></span></p>
+                 
+                 <div class="max-w-4xl mx-auto mb-8">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="text-base font-medium text-green-400">Progress</span>
+                        <span id="progress-text" class="text-sm font-medium text-green-400">0% Complete</span>
+                    </div>
+                    <div class="w-full progress-bar-container h-2.5">
+                        <div id="progress-bar" class="progress-bar" style="width: 0%"></div>
+                    </div>
+                 </div>
+
+                 <div id="roadmap-container" class="space-y-4 max-w-4xl mx-auto"></div>
+
+                 <div class="text-center mt-12">
+                     <button id="download-pdf" class="bg-green-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-700 transition-colors"><i class="fas fa-file-pdf mr-2"></i>Download as PDF</button>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-6">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <div class="space-x-4 mb-4">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Terms of Service</a>
+                <a href="#" class="hover:text-white">Contact</a>
+            </div>
+            <p>&copy; 2025 Pathfinder AI. All rights reserved. Your Future, Clarified.</p>
+        </div>
+    </footer>
+
+<script src="script.js">
+    
+</script>
+
+</body>
+</html>
+
